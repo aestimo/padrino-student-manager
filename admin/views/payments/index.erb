@@ -1,3 +1,4 @@
+<h4>All payments:</h4><br>
 <ul class="nav nav-tabs">
   <li class=active> <%= link_to tag_icon(:list, pat(:list)), url(:payments, :index) %></li>
   <li> <%= link_to tag_icon(:plus, pat(:new)), url(:payments, :new) %></li>
@@ -57,23 +58,15 @@
           <td class=list-column> <%= payment.account_id %> </td>
           <td class=list-column> <%= payment.course_id %> </td>
           <td class=list-column> <%= payment.payment_date %> </td>
-          <td class=list-column> <%= payment.amount %> </td>
+          <td class=list-column> <%= number_to_currency(payment.amount, :unit => "KES. ", :separator => ".", :delimiter => ",") %> </td>
           <td class=list-column> <%= payment.receipt_no %> </td>
           <td class=list-column> <%= time_ago_in_words payment.created_at %></td>
           <td class=list-column> <%= time_ago_in_words payment.updated_at %></td>
           <td class="list-column list-row-action">
-            <div class='list-row-action-wrapper'>
+            <div>
                <%= link_to tag_icon(:edit), :href => url(:payments, :edit, :id => payment.id), :rel => :tooltip, :title => "#{pat(:edit)} payment", :class => 'list-row-action-wrapper-link' %>
                <%= link_to tag_icon(:trash), :rel => :tooltip, :title => "#{pat(:delete)} payment", :class => 'list-row-action-delete-one list-row-action-wrapper-link' %>
-               <div class="popover list-row-action-popover-delete-one left">
-                 <div class=arrow> </div>
-                 <h3 class=popover-title><%= pat(:delete, :model => "payment") %></h3>
-                 <div class=popover-content>
-                   <%- form_tag url(:payments, :destroy, :id => payment.id), :method => :delete do %>
-                     <%= submit_tag pat(:delete), :class =>'list-row-action-popover-delete-one-btn btn btn-danger btn-small' %>
-                     <div class="btn btn-default btn-small cancel"><%= pat(:cancel) %></div>
-                   <% end %>
-               </div>
+               <div >
              </div>
           </td>
       <% end %>

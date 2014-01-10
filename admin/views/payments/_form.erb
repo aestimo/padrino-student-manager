@@ -2,15 +2,18 @@
 <fieldset class='control-group <%= error ? 'has-error' : ''%>'>
   <%= f.label "Paying account", :class => 'control-label' %>
   <div class='controls'>
-    <%= f.select :account_id,:options => Account.where(:role=> 'student').map(&:name), :class => 'form-control input-xlarge input-with-feedback', :autofocus => true %>
+    <% @options_2 = Account.where(:role=> "student") %>
+    <%= f.select :account_id, :collection => @options_2 , :fields  => [:name, :id],:class => 'form-control input-xlarge input-with-feedback' %>
     <span class='help-inline'><%= error ? f.error_message_on(:account_id) : "Select the student..." %></span>
   </div>
 </fieldset>
 <% error = @payment.errors.include?(:course_id) %>
+
 <fieldset class='control-group <%= error ? 'has-error' : ''%>'>
   <%= f.label :course_id, :class => 'control-label' %>
   <div class='controls'>
-    <%= f.select :course_id,:options => Course.all.map(&:name), :class => 'form-control input-xlarge input-with-feedback' %>
+    <% @options = Course.all %>
+    <%= f.select :course_id, :collection => @options , :fields  => [:name, :id],:class => 'form-control input-xlarge input-with-feedback' %>
     <span class='help-inline'><%= error ? f.error_message_on(:course_id) : "The course the student is paying for..." %></span>
   </div>
 </fieldset>

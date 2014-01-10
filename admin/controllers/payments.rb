@@ -17,7 +17,9 @@ PadrinoStudentManager::Admin.controllers :payments do
     #TODO:..THE POST ACTION IS NOT SUBMITTING THE ASSOCIATED MODELS...WE SHOULD ADD A BUILD ACTION
 
     #@payment = Payment.new(params[:payment])
-    @payment = Payment.create(params)
+    @payment = Payment.new(params[:payment])
+    #@payment.account = @payment.create(params[:account_id])
+    #@payment.course = @payment.create(params[:course_id])
 
     if @payment.save
       @title = pat(:create_title, :model => "payment #{@payment.id}")
