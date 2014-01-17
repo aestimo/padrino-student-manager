@@ -1,8 +1,15 @@
 PadrinoStudentManager::Admin.controllers :accounts do
+
   get :index do
     @title = "Accounts"
     @accounts = Account.all
     render 'accounts/index'
+  end
+
+  get :all_students do
+    @title = "All students"
+    @accounts = Account.where(:role=>"student")
+    render 'accounts/all_students'
   end
 
   get :new do

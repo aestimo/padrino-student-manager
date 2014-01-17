@@ -7,6 +7,14 @@ PadrinoStudentManager::Admin.controllers :payments do
     render 'payments/index'
   end
 
+  get :all_payments do
+  #  gets all the payments for a particular student
+  #  @title = "#{@payments.account_id} payments"
+    @payments = Payment.find_by_account_id(params[:account_id])
+
+    render 'payments/all_payments'
+  end
+
   get :new do
     @title = pat(:new_title, :model => 'payment')
     @payment = Payment.new
@@ -14,12 +22,7 @@ PadrinoStudentManager::Admin.controllers :payments do
   end
 
   post :create do
-    #TODO:..THE POST ACTION IS NOT SUBMITTING THE ASSOCIATED MODELS...WE SHOULD ADD A BUILD ACTION
-
-    #@payment = Payment.new(params[:payment])
     @payment = Payment.new(params[:payment])
-    #@payment.account = @payment.create(params[:account_id])
-    #@payment.course = @payment.create(params[:course_id])
 
     if @payment.save
       @title = pat(:create_title, :model => "payment #{@payment.id}")

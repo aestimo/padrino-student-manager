@@ -34,6 +34,7 @@ module PadrinoStudentManager
     end
 
     access_control.roles_for :admin do |role|
+    role.project_module :lessons, '/lessons'
     role.project_module :payments, '/payments'
     role.project_module :courses, '/courses'
     role.project_module :accounts, '/accounts'

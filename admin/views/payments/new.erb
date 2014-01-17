@@ -3,7 +3,6 @@
   <li class="active"> <%= link_to tag_icon(:plus, pat(:new)), url(:payments, :new) %></li>
 </ul>
 <div class="tabs-content">
-  <!--TODO: I THINK THIS IS WHERE WE DEFINE AN ASSOCIATED MODELS BUILD ACTION...-->
   <% form_for :payment, url(:payments, :create), :class => 'form-horizontal' do |f| %>
     <%= partial 'payments/form', :locals => { :f => f } %>
  <% end %>
