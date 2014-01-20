@@ -3,6 +3,9 @@ require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
 RSpec.configure do |conf|
   conf.include Rack::Test::Methods
+  conf.full_backtrace= false # save the console
+  conf.color_enabled= true   # save your eyes
+  conf.formatter = :documentation
 end
 
 # You can use this method to custom specify a Rack app

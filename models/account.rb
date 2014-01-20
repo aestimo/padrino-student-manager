@@ -3,7 +3,6 @@ class Account < ActiveRecord::Base
 
   has_many :payments
 
-  # Validations
   validates_presence_of     :email, :role
   validates_presence_of     :password,                   :if => :password_required
   validates_presence_of     :password_confirmation,      :if => :password_required
@@ -30,11 +29,11 @@ class Account < ActiveRecord::Base
   end
 
   private
-    def encrypt_password
-      self.crypted_password = ::BCrypt::Password.create(password)
-    end
+  def encrypt_password
+    self.crypted_password = ::BCrypt::Password.create(password)
+  end
 
-    def password_required
-      crypted_password.blank? || password.present?
-    end
+  def password_required
+    crypted_password.blank? || password.present?
+  end
 end
