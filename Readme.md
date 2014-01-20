@@ -7,7 +7,7 @@ The Learning manager app runs on Padrino, ActiveRecord and whatever database to 
                     certified, how they do exams...they can even check their results, payment status e.t.c
     b. Trainers == How they teach i.e. they can check their lesson allocations, how much they've earned for teaching
                     track the exams they've set, check their track records in terms of student results e.t.c.
-    c. Payments == The app will help the primary user track they payments coming in i.e. those made by students and the
+    c. Payments == The app will help the primary user track the payments coming in i.e. those made by students and the
                     payments going out i.e. those made to trainers. It will be able to print receipts and even enable students
                     to pay in installements.
 

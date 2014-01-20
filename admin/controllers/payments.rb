@@ -1,7 +1,5 @@
 PadrinoStudentManager::Admin.controllers :payments do
   get :index do
-    #TODO:WORK ON THE EDIT AND DELETE LINKS COZ THEY DON'T SEEM TO BE SHOWING....
-
     @title = "Payments"
     @payments = Payment.all
     render 'payments/index'
@@ -9,8 +7,7 @@ PadrinoStudentManager::Admin.controllers :payments do
 
   get :all_payments do
   #  gets all the payments for a particular student
-  #  @title = "#{@payments.account_id} payments"
-    @payments = Payment.find_by_account_id(params[:account_id])
+  #  @payments = Payment.where(:account_id])
 
     render 'payments/all_payments'
   end
