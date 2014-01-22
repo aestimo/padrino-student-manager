@@ -22,3 +22,4 @@ The Learning manager app runs on Padrino, ActiveRecord and whatever database to 
         + trainer - the trainer should be able to access lessons, students and payment status (read only)
     b. Mounted apps - To enable the core app to serve an unlimited number of customers, it will host each customer as a mounted app which
                         has access to the core functions but relative to the customer. Customers cannot access each others apps.
+
