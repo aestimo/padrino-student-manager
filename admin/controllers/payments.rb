@@ -7,7 +7,8 @@ PadrinoStudentManager::Admin.controllers :payments do
 
   get :all_payments, :map => "payment_breakdown/:id" do
     @title = "Student's payment breakdown"
-    @payments = Payment.where('account_id=?',params[:id]).select('payments.amount as payments_amount').order('created_at desc')
+    @paying_student = Account.where('id=?',params[:id]).pluck(:name).first
+    @payments = Payment.where('account_id=?',params[:id]).select('payments.*').order('created_at desc')
 
     render 'payments/all_payments'
   end
