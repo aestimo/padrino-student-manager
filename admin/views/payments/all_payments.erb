@@ -2,7 +2,7 @@
 
 <!--TODO: THIS SHOULD LIST ALL THE PAYMENTS OF A PARTICULAR STUDENT-->
 
-<h4><%= @paying_student %>'s payment breakdown</h4> <br>
+<h4><%= @paying_student %>'s payment breakdown:</h4>
 <ul class="nav nav-tabs">
 <div class=tabs-content>
   <table id=list class="table table-striped table-hover table-condensed">
@@ -39,6 +39,7 @@
       </div>
     </th>
     <th class=header> Date of payment</th>
+    <th class=header> Course paid for</th>
     <th class=header> Receipt no</th>
     <th class=header> Payment amount</th>
     <th class="header list-row-action-header"></th>
@@ -50,14 +51,14 @@
           <td class="list-column list-selectable">
           </td>
           <td class=list-column> <%= account.payment_date %> </td>
+          <td class=list-column> <%= account.course_id %> </td>
           <td class=list-column> <%= account.receipt_no %> </td>
-          <td class=list-column> <%= number_to_currency(account.amount) %> </td>
+          <td class=list-column> <%= number_to_currency(account.amount, :unit => "KES. ", :separator => ".", :delimiter => ",") %> </td>
           <td class="list-column list-row-action">
         </td>
     </tr>
 
     <% end %>
-    <tr class="list-row">The total of the student's payments</tr>
     </tbody>
   </table>
 </div>
