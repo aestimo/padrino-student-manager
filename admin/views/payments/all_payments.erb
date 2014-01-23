@@ -1,4 +1,3 @@
-
 <h4><%= @paying_student %>'s payment breakdown:</h4>
 <h4>Total payments: <%= number_to_currency(@payments.sum(:amount), :unit => "KES. ", :separator => ".", :delimiter => ",") %></h4>
 <ul class="nav nav-tabs">

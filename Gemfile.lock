@@ -89,6 +89,7 @@ GEM
     tzinfo (0.3.38)
     url_mount (0.2.1)
       rack
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
@@ -103,3 +104,4 @@ DEPENDENCIES
   rspec
   sqlite3
   thin
+  will_paginate (~> 3.0)

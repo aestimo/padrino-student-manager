@@ -14,6 +14,7 @@ gem 'thin' # or mongrel
 gem 'rake'
 
 # Component requirements
+gem 'will_paginate', '~>3.0'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'erubis', '~> 2.7.0'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
