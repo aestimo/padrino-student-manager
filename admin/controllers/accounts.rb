@@ -2,8 +2,7 @@ PadrinoStudentManager::Admin.controllers :accounts do
 
   get :index do
     @title = "Accounts"
-    @accounts = Account.order('name asc')
-    @paginated_accounts = @accounts.paginate(:page => params[:page], :per_page => 5)
+    @accounts = Account.page(params[:page]).order('created_at DESC')
     render 'accounts/index'
   end
 
