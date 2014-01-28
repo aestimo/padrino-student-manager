@@ -1,15 +1,19 @@
 PadrinoStudentManager::Admin.controllers :payments do
+
   get :index do
     @title = "Payments"
-    @payments = Payment.all
+    @payments = Payment.order('created_at desc')
     render 'payments/index'
   end
 
   get :all_payments, :map => "payment_breakdown/:id" do
 
     @paying_student = Account.where('id=?',params[:id]).pluck(:name).first
+    @course_paid_for = Course.where('id=?',params[:id]).pluck(:name).first
     @payments = Payment.where('account_id=?',params[:id]).select('payments.*').order('created_at desc')
     @title = "#{@paying_student}'s payment breakdown"
+
+    #@payment_balance = @course_paid_for.map(:cost) - @payments.sum(:amount)
 
     render 'payments/all_payments'
   end

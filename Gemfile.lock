@@ -27,7 +27,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    multi_json (1.8.2)
+    multi_json (1.8.4)
     padrino (0.11.4)
       padrino-admin (= 0.11.4)
       padrino-cache (= 0.11.4)
@@ -59,7 +59,7 @@ GEM
       padrino-core (= 0.11.4)
     polyglot (0.3.3)
     rack (1.5.2)
-    rack-protection (1.5.1)
+    rack-protection (1.5.2)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
