@@ -1,0 +1,84 @@
+
+<h4>All lessons:</h4> <br>
+<ul class="nav nav-tabs">
+  <li class=active> <%= link_to tag_icon(:list, pat(:list)), url(:lessons, :index) %></li>
+  <li> <%= link_to tag_icon(:plus, pat(:new)), url(:lessons, :new) %></li>
+</ul>
+<div class=tabs-content>
+  <table id=list class="table table-striped table-hover table-condensed">
+    <thead>
+      <tr>
+        <th class="header list-menu">
+          <div class=dropdown>
+            <a href="#" class="list-menu-toggle dropdown-toggle" data-toggle='dropdown'>
+              <%= tag_icon :magic %> <span class=caret></span>
+            </a>
+            <ul class="list-menu dropdown-menu" role=menu>
+              <li class=ist-menu-wrapper>
+                <%= link_to tag_icon(:check, pat(:select_all)), '#', :id => 'select-all', :class => 'list-menu-link' %>
+              </li>
+              <li class=list-menu-wrapper.list-menu-wrapper-disabled>
+                <%= link_to tag_icon('check-empty', pat(:deselect_all)), '#', :id => 'deselect-all', :class => 'list-menu-link list-menu-link-disabled' %>
+              </li>
+              <li class="list-menu-divider divider"></li>
+              <li class=list-menu-wrapper.list-menu-wrapper-disabled>
+                <%=link_to tag_icon(:trash, pat(:delete_selected)), '#', :id => 'delete-selected', :class => 'list-menu-link list-menu-link-disabled' %>
+                <div class='list-menu-popover-delete-selected popover right'>
+                  <div class=arrow></div>
+                  <h3 class=popover-title><%= pat(:delete_selected_title) %></h3>
+                  <div class=popover-content>
+                    <% form_tag url(:lessons, :destroy_many), :method => :delete do %>
+                      <%=hidden_field_tag :lesson_ids, :'data-delete-many-ids' => true %>
+                      <%=submit_tag pat(:delete), :class =>'list-menu-popover-delete-selected-btn btn btn-danger btn-small' %>
+                      <div class='btn btn-default btn-small cancel'><%= pat(:cancel) %></div>
+                    <% end %>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </th>
+                <th class=header> <%= mat(:lesson, :id) %></th>
+                <th class=header> <%= mat(:lesson, :course_id) %></th>
+                <th class=header> <%= mat(:lesson, :start_date) %></th>
+                <th class=header> <%= mat(:lesson, :end_date) %></th>
+                <th class=header> <%= mat(:lesson, :lesson_cost) %></th>
+                <th class=header> <%= mat(:lesson, :account_id) %></th>
+                <th class=header> <%= mat(:lesson, :created_at) %></th>
+                <th class=header> <%= mat(:lesson, :updated_at) %></th>
+                <th class="header list-row-action-header"></th>
+    </thead>
+
+    <tbody>
+      <% @lessons.each do |lesson| %>
+        <tr class=list-row>
+          <td class="list-column list-selectable">
+            <%= check_box_tag 'lesson_ids[]', :value => lesson.id, :class => 'list-selectable-checkbox' %>
+           </td>
+          <td class=list-column> <%= lesson.id %> </td>
+          <td class=list-column> <%= lesson.course_id %> </td>
+          <td class=list-column> <%= lesson.start_date %> </td>
+          <td class=list-column> <%= lesson.end_date %> </td>
+          <td class=list-column> <%= lesson.lesson_cost %> </td>
+          <td class=list-column> <%= lesson.account_id %> </td>
+          <td class=list-column> <%= time_ago_in_words lesson.created_at %></td>
+          <td class=list-column> <%= time_ago_in_words lesson.updated_at %></td>
+          <td class="list-column list-row-action">
+            <div class='list-row-action-wrapper'>
+               <%= link_to 'Edit', url_for(:lessons, :edit, :id => lesson.id), :rel => :tooltip, :title => "#{pat(:edit)} lesson", :class => 'list-row-action-wrapper-link' %>
+               <%= link_to "Delete", :rel => :tooltip, :title => "#{pat(:delete)} lesson", :class => 'list-row-action-delete-one list-row-action-wrapper-link' %>
+               <div class="popover list-row-action-popover-delete-one left">
+                 <div class=arrow> </div>
+                 <h3 class=popover-title><%= pat(:delete, :model => "lesson") %></h3>
+                 <div class=popover-content>
+                   <%- form_tag url(:lessons, :destroy, :id => lesson.id), :method => :delete do %>
+                     <%= submit_tag pat(:delete), :class =>'list-row-action-popover-delete-one-btn btn btn-danger btn-small' %>
+                     <div class="btn btn-default btn-small cancel"><%= pat(:cancel) %></div>
+                   <% end %>
+               </div>
+             </div>
+          </td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
