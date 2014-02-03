@@ -19,7 +19,7 @@ class Account < ActiveRecord::Base
   ##
   # This method is for authentication purpose.
   #
-  self.per_page = 10
+  self.per_page = 6
 
   def self.authenticate(email, password)
     account = first(:conditions => ["lower(email) = lower(?)", email]) if email.present?
