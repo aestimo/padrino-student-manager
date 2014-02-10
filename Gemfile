@@ -10,6 +10,10 @@ gem 'thin' # or mongrel
 
 # Optional JSON codec (faster performance)
 # gem 'oj'
+group :production do
+  gem 'shelly-dependencies'
+  gem 'pg'
+end
 
 # Project requirements
 gem 'rake'

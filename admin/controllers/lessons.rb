@@ -2,6 +2,7 @@ PadrinoStudentManager::Admin.controllers :lessons do
   get :index do
     @title = "Lessons"
     @lessons = Lesson.all
+    #@course_name = Course.where('id=?',params[:id]).pluck(:name)
     render 'lessons/index'
   end
 

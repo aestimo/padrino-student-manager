@@ -20,9 +20,8 @@ ActiveRecord::Base.configurations[:development] = {
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'postgres',
-  :database => 'localhost/mydb'
-#ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+    :adapter => 'sqlite3',
+    :database => Padrino.root('db', 'padrino_student_manager_production.db')
 
 }
 
