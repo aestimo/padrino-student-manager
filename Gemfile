@@ -12,7 +12,11 @@ gem 'thin' # or mongrel
 # gem 'oj'
 group :production do
   gem 'shelly-dependencies'
-  gem 'pg'
+  #gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3'
 end
 
 # Project requirements
@@ -23,7 +27,7 @@ gem 'will_paginate', '~>3.0'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'erubis', '~> 2.7.0'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
-gem 'sqlite3'
+
 
 # Test requirements
 gem 'rspec', :group => 'test'

@@ -20,8 +20,12 @@ ActiveRecord::Base.configurations[:development] = {
 }
 
 ActiveRecord::Base.configurations[:production] = {
-    :adapter => 'sqlite3',
-    :database => Padrino.root('db', 'padrino_student_manager_production.db')
+    :adapter   => 'postgresql',
+    :database  => 'padrino-student-manager_production',
+    :username  => 'padrino-student-manager',
+    :password  => 'padrino-student-manager%',
+    :host      => 'localhost',
+    :port      => 5432
 
 }
 
