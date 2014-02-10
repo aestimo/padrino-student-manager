@@ -19,7 +19,7 @@ ActiveRecord::Base.configurations[:development] = {
 
 }
 
-ActiveRecord::Base.configurations[Padrino.env.production] = {
+ActiveRecord::Base.configurations[Padrino.env] = {
     adapter:   'postgresql',
     database:  ENV['POSTGRESQL_DATABASE'],
     username:  ENV['POSTGRESQL_USER'],
