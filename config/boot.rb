@@ -7,6 +7,11 @@ require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)
 
+
+# Read database credentials from .env.environment file
+require 'dotenv'
+Dotenv.load ".env.#{Padrino.env}"
+
 ##
 # ## Enable devel logging
 #

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aba1d7e7-335d-46f6-be01-fe582f4bbdf5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.rb" afterPath="$PROJECT_DIR$/config/database.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/padrino-student-manager.iml" afterPath="$PROJECT_DIR$/.idea/padrino-student-manager.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/boot.rb" afterPath="$PROJECT_DIR$/config/boot.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="77deb1fb-3d98-41cf-aa37-ed75115a7061" name="New changelist" comment="...these hadn't been added...just added them" />
@@ -63,10 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="database.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="56" selection-start="584" selection-end="584" vertical-scroll-proportion="0.35114503" vertical-offset="131" max-vertical-offset="1005">
+            <state line="21" column="56" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="1005">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boot.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/boot.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.39823008" vertical-offset="0" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
@@ -120,6 +126,7 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/.env.production" />
         <option value="$PROJECT_DIR$/config/database.rb" />
+        <option value="$PROJECT_DIR$/config/boot.rb" />
       </list>
     </option>
   </component>
@@ -564,7 +571,11 @@
       <created>1392053033132</created>
       <updated>1392053033132</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="a bit of polishing&#10;">
+      <created>1392058883853</created>
+      <updated>1392058883853</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -593,7 +604,7 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36890647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36890647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32720104" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16342933" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -601,7 +612,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19022103" sideWeight="0.50208336" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2753623" sideWeight="0.5003349" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27404478" sideWeight="0.4996651" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27404478" sideWeight="0.4996651" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -640,7 +651,8 @@
     <MESSAGE value="adding the static files..." />
     <MESSAGE value="added postgres functionality" />
     <MESSAGE value="removed postres gem" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed postres gem" />
+    <MESSAGE value="a bit of polishing&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="a bit of polishing&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -781,11 +793,6 @@
         <state line="74" column="59" selection-start="4297" selection-end="4297" vertical-scroll-proportion="1.5919282" vertical-offset="400" max-vertical-offset="1230" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/boot.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="50" selection-start="781" selection-end="781" vertical-scroll-proportion="0.6689189" vertical-offset="93" max-vertical-offset="825" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/views/accounts/index.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="41" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1290" />
@@ -914,7 +921,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="56" selection-start="584" selection-end="584" vertical-scroll-proportion="0.35114503" vertical-offset="131" max-vertical-offset="1005">
+        <state line="21" column="56" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="1005">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/boot.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.39823008" vertical-offset="0" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
