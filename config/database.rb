@@ -19,14 +19,13 @@ ActiveRecord::Base.configurations[:development] = {
 
 }
 
-ActiveRecord::Base.configurations[:production] = {
-    :adapter   => 'postgresql',
-    :database  => 'padrino-student-manager_production',
-    :username  => 'padrino-student-manager',
-    :password  => 'padrino-student-manager%',
-    :host      => 'localhost',
-    :port      => 5432
-
+ActiveRecord::Base.configurations[Padrino.env.production] = {
+    adapter:   'postgresql',
+    database:  ENV['POSTGRESQL_DATABASE'],
+    username:  ENV['POSTGRESQL_USER'],
+    password:  ENV['POSTGRESQL_PASSWORD'],
+    host:      ENV['POSTGRESQL_HOST'],
+    port:      5432
 }
 
 ActiveRecord::Base.configurations[:test] = {
