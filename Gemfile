@@ -12,7 +12,7 @@ gem 'thin' # or mongrel
 # gem 'oj'
 group :production do
   gem 'shelly-dependencies'
-  #gem 'pg'
+  gem 'pg'
 end
 
 group :development do

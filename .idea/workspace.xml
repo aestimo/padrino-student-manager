@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aba1d7e7-335d-46f6-be01-fe582f4bbdf5" name="Default" comment="" />
+    <list default="true" id="aba1d7e7-335d-46f6-be01-fe582f4bbdf5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/padrino-student-manager.iml" afterPath="$PROJECT_DIR$/.idea/padrino-student-manager.iml" />
+    </list>
     <list id="77deb1fb-3d98-41cf-aa37-ed75115a7061" name="New changelist" comment="...these hadn't been added...just added them" />
     <ignored path="padrino-student-manager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +46,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="2" selection-start="291" selection-end="291" vertical-scroll-proportion="0.42920354" vertical-offset="31" max-vertical-offset="765">
+            <state line="15" column="2" selection-start="290" selection-end="290" vertical-scroll-proportion="0.42920354" vertical-offset="31" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -899,7 +903,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="291" selection-end="291" vertical-scroll-proportion="0.42920354" vertical-offset="31" max-vertical-offset="765">
+        <state line="15" column="2" selection-start="290" selection-end="290" vertical-scroll-proportion="0.42920354" vertical-offset="31" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
